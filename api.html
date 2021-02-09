@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <title>apicine</title>
+
+    </head>
+    <body>
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<div id="app">
+		<nav class="navbar ">
+			
+			<div class="container-fluid">
+				<a class="titulo " href="index.html">Inicio</a>
+					<form  @submit.prevent="getMovies">
+						<input class="form-control mr-sm-2" v-model="query"  placeholder="Titulo..."/>
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar Pelicula</button>
+                    </form>
+				</div>
+			</div>
+		</nav>
+
+		<header>
+			<div >
+				<div class="container-info">
+					<h1 class="text-center">Busca Cualquier Pelicula</h1>
+				</div>
+				<div class="container-fluid">
+					<div class="row" id="peliculas"></div><!--aqui se mete la lista-->
+				</div>	
+			</div>
+        </header>
+        <footer class="pie">
+            <div class="col-sm-12 text-center ">
+              
+                <ul class="list-unstyled list-inline mt-4">
+                    <li class="list-inline-item">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fab fa-twitter"></i> </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+	</div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/bootstrap.js" language="javascript" type="text/javascript"></script>
+        <script src="js/script.js" language="javascript" type="text/javascript"></script>
+    </body>
+</html>
